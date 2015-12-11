@@ -13,7 +13,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Insuliin extends Application{
-    @Override
+    TextField toidulahter1;
+    Button arvuta;
+    String tortuous1;
     public void start(Stage primaryStage) throws Exception {
 
 
@@ -25,7 +27,7 @@ public class Insuliin extends Application{
         //hbox.setAlignment(Pos.BOTTOM_LEFT);
         hbox.setPadding(new Insets(10, 10, 10, 10));
 
-        // Hiljem v�iks teha juurde uue kasutaja lisamise mooduli
+        // Hiljem võiks teha juurde uue kasutaja lisamise mooduli
 
 
 
@@ -131,12 +133,12 @@ public class Insuliin extends Application{
         gridPane.setHalignment(toidukogus5, HPos.LEFT);
         toidukogus5.setPromptText("kogus5");
 */
+
+
         Button arvuta = new Button();
         arvuta.setText("Arvuta");
-        arvuta.setOnAction(event -> {
-                    System.out.println("Arvutatud");
-                }
-        );
+
+
         gridPane.setConstraints(arvuta, 1, 6);
         gridPane.setHalignment(arvuta, HPos.RIGHT);
 
@@ -151,12 +153,12 @@ public class Insuliin extends Application{
 
         //Text tekst1= new Text("vasakul");
 
-
         Label vastus= new Label();
         gridPane.setConstraints(vastus, 2, 1);
         gridPane.setColumnSpan(vastus, 1); // näitab mitu veergu ta ära katab 1 või 2
         gridPane.setHalignment(vastus, HPos.RIGHT);
-        vastus.setText(toidulahter1.getId()+toidukogus1.getId());
+        vastus.setText(tortuous1+"test");
+
 
 
         gridPane.getChildren().addAll(
@@ -189,6 +191,12 @@ public class Insuliin extends Application{
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    /*public void arvutaToiduKogus (){
+
+    }
+
+    */
 }
 
 
