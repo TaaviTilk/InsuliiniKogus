@@ -15,35 +15,66 @@ import org.w3c.dom.Element;
 
 public class WriteXMLFile {
 
-    public static void write(ObservableList<Person>) {
+    public static void write(ObservableList<Person> data) {
 
         try {
 
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 
+
+
+
+
             // root elements
             Document doc = docBuilder.newDocument();
-            Element rootElement = doc.createElement("Toit");
+
+
+            Element rootElement = doc.createElement("Persons");
             doc.appendChild(rootElement);
 
-            // staff elements
-            Element staff = doc.createElement("Toit");
-            rootElement.appendChild(staff);
 
+            for (int i = 0; i <data.size(); i++) {
+                // staff elements
+                Element staff = doc.createElement("Person");
+                rootElement.appendChild(staff);
+
+                String a = "" + i;
+                // set attribute to staff element
+                Attr attr = doc.createAttribute("id");
+                attr.setValue(a);
+                staff.setAttributeNode(attr);
+
+                // shorten way
+                // staff.setAttribute("id", "1");
+
+                // firstname elements
+                Element toit = doc.createElement("Toiduliik");
+                toit.appendChild(doc.createTextNode(data.get(i).getToit()));
+                staff.appendChild(toit);
+
+
+            }
+
+/*
+            Element staff2 = doc.createElement("Person");
+            rootElement.appendChild(staff2);
+            //String a=""+i+1;
             // set attribute to staff element
-            Attr attr = doc.createAttribute("id");
-            attr.setValue("1");
-            staff.setAttributeNode(attr);
+            Attr attr1 = doc.createAttribute("id");
+            attr1.setValue("2");
+            staff2.setAttributeNode(attr1);
 
             // shorten way
             // staff.setAttribute("id", "1");
 
             // firstname elements
-            Element firstname = doc.createElement("firstname");
-            firstname.appendChild(doc.createTextNode("yong"));
-            staff.appendChild(firstname);
+            Element firstname3 = doc.createElement("Toiduliik");
+            firstname3.appendChild(doc.createTextNode(data.get(2).getFirstName()));
+            staff2.appendChild(firstname3);
+*/
 
+            //}
             // lastname elements
 
 
@@ -51,16 +82,20 @@ public class WriteXMLFile {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("/Users/Taavi Tilk/IdeaProjects/InsuliiniKogus/file1.xml"));
 
-            // Output to console for testing
-            // StreamResult result = new StreamResult(System.out);
+            //StreamResult result =  new StreamResult(System.out);
+            StreamResult result = new StreamResult(new File("/Users/Taavi Tilk/IdeaProjects/InsuliiniKogus/file2.xml"));
+
+
+
 
             transformer.transform(source, result);
 
             System.out.println("File saved!");
 
-        } catch (ParserConfigurationException pce) {
+        }
+
+        catch (ParserConfigurationException pce) {
             pce.printStackTrace();
         } catch (TransformerException tfe) {
             tfe.printStackTrace();
