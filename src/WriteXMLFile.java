@@ -30,13 +30,13 @@ public class WriteXMLFile {
             Document doc = docBuilder.newDocument();
 
 
-            Element rootElement = doc.createElement("Persons");
+            Element rootElement = doc.createElement("Toidutabel");
             doc.appendChild(rootElement);
 
 
             for (int i = 0; i <data.size(); i++) {
                 // staff elements
-                Element staff = doc.createElement("Person");
+                Element staff = doc.createElement("Toit");
                 rootElement.appendChild(staff);
 
                 String a = "" + i;
@@ -53,6 +53,13 @@ public class WriteXMLFile {
                 toit.appendChild(doc.createTextNode(data.get(i).getToit()));
                 staff.appendChild(toit);
 
+                Element kogus = doc.createElement("Kogus");
+                kogus.appendChild(doc.createTextNode(data.get(i).getKogus()));
+                staff.appendChild(kogus);
+
+                Element yhik = doc.createElement("Yhik");
+                yhik.appendChild(doc.createTextNode(data.get(i).getYhik()));
+                staff.appendChild(yhik);
 
             }
 

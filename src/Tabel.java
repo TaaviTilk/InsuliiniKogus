@@ -27,12 +27,12 @@ public class Tabel extends Application {
     private final TableView<Person> table = new TableView<>();
     private final ObservableList<Person> data =
             FXCollections.observableArrayList(
-                   /* new Person("Kartul", "20", "tk"),
+                    new Person("Kartul", "20", "tk"),
                     new Person("Liha", "50", "tk"),
                     new Person("Kaste", "10", "g"),
                     new Person("Leib", "25", "viil"),
                     new Person("Mahl", "15", "klaas 200 ml")
-                    */
+
             );
 
 
@@ -53,7 +53,7 @@ public class Tabel extends Application {
 
         Scene scene = new Scene(new Group());
         stage.setTitle("Toidu tabel");
-        stage.setWidth(450);
+        stage.setWidth(350);
         stage.setHeight(550);
 
         final Label label = new Label("Toidu tabel");
@@ -95,7 +95,7 @@ public class Tabel extends Application {
                     ).setKogus(t.getNewValue());
                 });
 
-        yhikCol.setMinWidth(50);
+        yhikCol.setMinWidth(100);
         yhikCol.setCellValueFactory(
                 new PropertyValueFactory<>("yhik"));
         yhikCol.setCellFactory(cellFactory);

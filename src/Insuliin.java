@@ -27,6 +27,8 @@ public class Insuliin extends Application{
 
 
         primaryStage.setTitle("Insuliini koguse arvutamine");
+        primaryStage.setWidth(450);
+        primaryStage.setHeight(250);
 
 
         // TOP
@@ -162,7 +164,7 @@ public class Insuliin extends Application{
         ///static int insuliinikogus;
 
         // Kõsib isikut
-        // küsib süsivesikute hulka ühe stitava insuliini �hiku kohta nt 10 (g) (vahemik 10-14 g)
+        // küsib süsivesikute hulka ühe stitava insuliini ühiku kohta nt 10 (g) (vahemik 10-14 g)
         //isik();
         ///insuliinikogus ();
 
@@ -171,8 +173,8 @@ public class Insuliin extends Application{
 
         // toidu kogust
         // arvutab toidukoguse kokku
-        // Arvutab s�stitava insuliini koguse.
-        // Salvestada s�stitav kopgus ja s�sivesikute hulk andmebaasi
+        // Arvutab süstitava insuliini koguse.
+        // Salvestada süstitav kopgus ja süsivesikute hulk andmebaasi
 
 
 
