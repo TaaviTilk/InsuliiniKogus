@@ -1,4 +1,3 @@
-import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,35 +20,21 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 
 
-public class Tabel extends Application {
+public class Tabel {
 
+    public HBox hb = new HBox();
+    public TableView<Person> table = new TableView<>();
+    public ObservableList<Person> data = FXCollections.observableArrayList();
 
-    private final TableView<Person> table = new TableView<>();
-    private final ObservableList<Person> data =
-            FXCollections.observableArrayList(
-                    new Person("Kartul", "20", "tk"),
-                    new Person("Liha", "50", "tk"),
-                    new Person("Kaste", "10", "g"),
-                    new Person("Leib", "25", "viil"),
-                    new Person("Mahl", "15", "klaas 200 ml")
-
-            );
-
-
-    public ObservableList<Person> data() {
-        return data;
+    public Tabel() {
+        LoeXML a = new LoeXML();
+        data = a.getAndmed();                                                                 //Vastavalt klikitud projekti nimele "n" on nüüd listi "data" andmeteks andmebaasidesse tehtud päringu tulemus.
+        table.setItems(data);
+        setupStage();
     }
 
-    final HBox hb = new HBox();
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-
-
-    @Override
-    public void start(Stage stage) {
+    public void setupStage() {
+        Stage stage = new Stage();
 
         Scene scene = new Scene(new Group());
         stage.setTitle("Toidu tabel");
@@ -114,15 +99,15 @@ public class Tabel extends Application {
         final TextField addToit = new TextField();
         addToit.setPromptText("Toit");
         addToit.setMaxWidth(toitCol.getPrefWidth());
-        addToit.setText("kala");
+        //addToit.setText("kala");
         final TextField addKogus = new TextField();
         addKogus.setMaxWidth(kogusCol.getPrefWidth());
         addKogus.setPromptText("Kogus");
-        addKogus.setText("100");
+        //addKogus.setText("100");
         final TextField addYhik = new TextField();
         addYhik.setMaxWidth(yhikCol.getPrefWidth());
         addYhik.setPromptText("Ühik");
-        addYhik.setText("g");
+        //addYhik.setText("g");
 
 
         String toit;
@@ -140,11 +125,11 @@ public class Tabel extends Application {
                             addKogus.getText(),
                             addYhik.getText())
             );
-            System.out.println(toit);
+
             addToit.clear();
             addKogus.clear();
             addYhik.clear();
-            WriteXMLFile.write(data);
+            KirjutaXML.write(data);
 
         });
 

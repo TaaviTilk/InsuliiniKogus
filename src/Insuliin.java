@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -12,20 +13,20 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Insuliin extends Application{
+public class Insuliin{
     ChoiceBox valik;
+    ChoiceBox valik2;
     TextField toidulahter1;
     TextField toidukogus1;
     Button arvuta;
     Button salvesta;
     String tn1;
+    public ObservableList<Person> toit = FXCollections.observableArrayList();
 
 
 
-
-    public void start(Stage primaryStage) throws Exception {
-
-
+    public Insuliin() {
+        Stage primaryStage = new Stage();
         primaryStage.setTitle("Insuliini koguse arvutamine");
         primaryStage.setWidth(450);
         primaryStage.setHeight(250);
@@ -54,6 +55,8 @@ public class Insuliin extends Application{
 
 
         hbox.setMargin(valik, new Insets(5));
+
+
 
 
 
@@ -88,7 +91,23 @@ public class Insuliin extends Application{
         toidukogus1.setPromptText("kogus1");
         toidukogus1.setId("Kogus1");
 
+        ChoiceBox valik2 = new ChoiceBox(FXCollections.observableArrayList(
+                "Kasper", "Jesper", "Joonatan")
+        );
+        //valik2.setTooltip(new Tooltip("Vali kasutaja"));
+        gridPane.setMargin(valik2, new Insets(5));
+        gridPane.setConstraints(valik2, 0, 2);
+        gridPane.setHalignment(valik2, HPos.LEFT);
+        valik2.getValue();
+        valik2.getSelectionModel()
+                .selectedItemProperty()
+                .addListener(
+                        (ObservableValue observable, Object oldValue, Object nimi) -> {
+                            System.out.println(nimi);
+                        });
 
+
+        hbox.setMargin(valik2, new Insets(5));
 
 
 
@@ -133,6 +152,7 @@ public class Insuliin extends Application{
                  */
                 //tekst1,
                 vastus,
+                valik2,
                 arvuta
                 //salvesta
         );
