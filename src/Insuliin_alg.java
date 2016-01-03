@@ -1,50 +1,46 @@
-import javafx.beans.value.ChangeListener;
+import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.StringConverter;
 
-public class Insuliin {
+public class Insuliin_alg {
     ChoiceBox valik;
     ChoiceBox valik2;
     TextField toidulahter1;
     TextField toidukogus1;
     Button arvuta;
     Button salvesta;
-    //public ObservableList<Person> kogus2 = FXCollections.observableArrayList();
-    public ObservableList<Person> toit =  FXCollections.observableArrayList();
-    VBox vBox;
-    public Object kogus;
-    //String[] greetings = new String[] { "A", "B", "C", "D", "E" };
+    String tn1;
+    public ObservableList<Person> toit = FXCollections.observableArrayList();
 
 
-    public Insuliin(){
-        loeXML();
-        Start();
-    }
 
-    private void loeXML() {
+    public void loeXML() {
         LoeXML a = new LoeXML();
-        toit = a.getAndmed();
+        toit = a.getAndmed();                                                                 //Vastavalt klikitud projekti nimele "n" on nüüd listi "data" andmeteks andmebaasidesse tehtud päringu tulemus.
 
     }
 
-    private void info (String nimi){
-        System.out.println(nimi);
-    }
+    public Insuliin_alg() {
 
-    private void Start () {
+        loeXML();
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Insuliini koguse arvutamine");
+        primaryStage.setWidth(450);
+        primaryStage.setHeight(250);
 
-        vBox = new VBox(10);
+
         // TOP
         HBox hbox = new HBox(10);
         //hbox.setAlignment(Pos.BOTTOM_LEFT);
@@ -65,15 +61,22 @@ public class Insuliin {
                 .selectedItemProperty()
                 .addListener(
                         (ObservableValue observable, Object oldValue, Object nimi) -> {
-                        //System.out.println(nimi);
+                        System.out.println(nimi);
                         });
 
 
+        //System.out.println(klass.toString());
+
+        //if(klass != null)
+        //{
+        //    System.out.println(klass.toString());
+
+        //}
+
         hbox.setMargin(valik, new Insets(5));
 
-        Label label = new Label();
-        hbox.setMargin(label, new Insets(5)); // toob kasti 5 pix eemale servast
-        label.setPrefWidth(60); // kasti pikkus
+
+
 
 
         TextField lahter2= new TextField();
@@ -81,7 +84,9 @@ public class Insuliin {
         lahter2.setPrefWidth(60); // kasti pikkus
         lahter2.setPromptText("number"); //tekitab kasti eelteksti
 
-        hbox.getChildren().addAll(valik,lahter2, label);
+
+
+        hbox.getChildren().addAll(valik,lahter2);
 
         // CENTER
         GridPane gridPane = new GridPane();
@@ -91,32 +96,12 @@ public class Insuliin {
         gridPane.setPadding(new Insets(10, 10, 10, 10));
 
 
-
-
-        ChoiceBox valik1 = new ChoiceBox();
-        gridPane.setMargin(valik1, new Insets(5));
-        gridPane.setConstraints(valik1, 0, 1);
-        gridPane.setHalignment(valik1, HPos.LEFT);
-
-
-        for (int i = 0; i < toit.size(); i++) {
-            valik1.getItems().add(toit.get(i).getToit()); }
-
-        valik1.setTooltip(new Tooltip("vali toit"));
-        valik1.getValue();
-        valik1.getSelectionModel()
-                .selectedItemProperty()
-                .addListener(
-                        (ObservableValue observable, Object oldValue, Object nimi) -> {
-                           kogus = nimi;
-                            // / kogus = nimi.equals(toit.get(3).getKogus());
-                            //System.out.println(kogus);
-                        });
-
-
-
-
-        //http://code.makery.ch/blog/javafx-8-event-handling-examples/
+        TextField toidulahter1= new TextField();
+        gridPane.setMargin(toidulahter1, new Insets(5));
+        gridPane.setConstraints(toidulahter1, 0, 1);
+        gridPane.setHalignment(toidulahter1, HPos.LEFT);
+        toidulahter1.setPromptText("toit1");
+        toidulahter1.setId("Toit1");
 
         TextField toidukogus1= new TextField();
         gridPane.setMargin(toidukogus1, new Insets(5));
@@ -125,8 +110,22 @@ public class Insuliin {
         toidukogus1.setPromptText("kogus1");
         toidukogus1.setId("Kogus1");
 
+        ChoiceBox valik2 = new ChoiceBox(FXCollections.observableArrayList()
+        );
+        //valik2.setTooltip(new Tooltip("Vali kasutaja"));
+        gridPane.setMargin(valik2, new Insets(5));
+        gridPane.setConstraints(valik2, 0, 2);
+        gridPane.setHalignment(valik2, HPos.LEFT);
+        valik2.getValue();
+        valik2.getSelectionModel()
+                .selectedItemProperty()
+                .addListener(
+                        (ObservableValue observable, Object oldValue, Object nimi) -> {
+                            System.out.println(nimi);
+                        });
 
-        hbox.setMargin(valik1, new Insets(5));
+
+        hbox.setMargin(valik2, new Insets(5));
 
 
 
@@ -139,21 +138,9 @@ public class Insuliin {
         gridPane.setHalignment(vastus, HPos.RIGHT);
 
 
-
         Button arvuta = new Button();
         arvuta.setText("Arvuta");
         arvuta.setOnAction(event -> {
-
-            if (valik1.getValue() != null &&
-                    !valik1.getValue().toString().isEmpty()){
-                vastus.setText("Arvutatud süsivesikute kogus on = " + kogus);
-                valik1.setValue(null);
-            }
-            else {
-                vastus.setText("Sa ei ole toitu vailnud");
-            }
-        }
-                    /*calculate();
                     float a = 20;
                     String b = toidukogus1.getText();
                     float c = Float.parseFloat(b);
@@ -161,13 +148,13 @@ public class Insuliin {
                     String e = ""+d;
                     vastus.setText(e);
                 }
-                */
         );
+
 
 
         gridPane.getChildren().addAll(
                 //cb,
-                valik1,
+                toidulahter1,
                 /**
                  toidulahter2,
                  toidulahter3,
@@ -183,12 +170,19 @@ public class Insuliin {
                  */
                 //tekst1,
                 vastus,
-
+                valik2,
                 arvuta
                 //salvesta
         );
 
-        vBox.getChildren().addAll(hbox,gridPane);
+        // Lava
+        BorderPane lava = new BorderPane();
+        lava.setTop(hbox);
+        lava.setCenter(gridPane);
+        Scene scene = new Scene(lava); //, 500,300
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
 
     }
 

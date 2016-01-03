@@ -1,215 +1,196 @@
-import javafx.beans.value.ObservableValue;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.geometry.Insets;
-import javafx.scene.Group;
-import javafx.scene.Scene;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
-import javafx.util.Callback;
+
 
 
 public class Tabel {
 
-    public HBox hb = new HBox();
-    public TableView<Person> table = new TableView<>();
-    public ObservableList<Person> data = FXCollections.observableArrayList();
+    static HBox hbox = new HBox();
+    static VBox vbox = new VBox();
+    private static TableView<ProjectDetail> table = new TableView<>();
+    static ObservableList<ProjectDetail> data = FXCollections.observableArrayList();
 
     public Tabel() {
-        LoeXML a = new LoeXML();
-        data = a.getAndmed();                                                                 //Vastavalt klikitud projekti nimele "n" on nüüd listi "data" andmeteks andmebaasidesse tehtud päringu tulemus.
-        table.setItems(data);
-        setupStage();
+    //    LoeXML a = new LoeXML();
+    //    data = a.getAndmed();                                                                 //Vastavalt klikitud projekti nimele "n" on nüüd listi "data" andmeteks andmebaasidesse tehtud päringu tulemus.
+     //   table.setItems(data);
+        setupScene();
     }
 
-    public void setupStage() {
-        Stage stage = new Stage();
-
-        Scene scene = new Scene(new Group());
-        stage.setTitle("Toidu tabel");
-        stage.setWidth(350);
-        stage.setHeight(550);
-
-        final Label label = new Label("Toidu tabel");
-        label.setFont(new Font("Arial", 20));
-
+    private static void setupScene() {                                                                                  //Meetod callitakse konstruktoris ning kuvab tabeli koos tulpade, sisendikohtade ja nuppudega. Määrab ka nuppude tegevuse.
         table.setEditable(true);
 
-        Callback<TableColumn<Person, String>,
-                TableCell<Person, String>> cellFactory
-                = (TableColumn<Person, String> p) -> new EditingCell();
+        TableColumn numberColumn = new TableColumn("Number");
+        numberColumn.setMinWidth(75);
+        numberColumn.setCellValueFactory(
+                new PropertyValueFactory<ProjectDetail, String>("number"));
+        numberColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        numberColumn.setOnEditCommit(
+                new EventHandler<CellEditEvent<ProjectDetail, String>>() {
+                    @Override
+                    public void handle(CellEditEvent<ProjectDetail, String> t) {
+                        ((ProjectDetail) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())
+                        ).setNumber(t.getNewValue());
+                    }
+                }
+        );
 
-        TableColumn<Person, String> toitCol =
-                new TableColumn<>("Toit");
-        TableColumn<Person, String> kogusCol =
-                new TableColumn<>("Kogus");
-        TableColumn<Person, String> yhikCol =
-                new TableColumn<>("Ühik");
+        TableColumn dateColumn = new TableColumn("Kuupaev");
+        dateColumn.setMinWidth(75);
+        dateColumn.setCellValueFactory(
+                new PropertyValueFactory<ProjectDetail, String>("date"));
+        dateColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        dateColumn.setOnEditCommit(
+                new EventHandler<CellEditEvent<ProjectDetail, String>>() {
+                    @Override
+                    public void handle(CellEditEvent<ProjectDetail, String> t) {
+                        ((ProjectDetail) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())
+                        ).setDate(t.getNewValue());
+                    }
+                }
+        );
 
-        toitCol.setMinWidth(100);
-        toitCol.setCellValueFactory(
-                new PropertyValueFactory<>("toit"));
-        toitCol.setCellFactory(cellFactory);
-        toitCol.setOnEditCommit(
-                (CellEditEvent<Person, String> t) -> {
-                    ((Person) t.getTableView().getItems().get(
-                            t.getTablePosition().getRow())
-                    ).setToit(t.getNewValue());
-                });
+        TableColumn priorityColumn = new TableColumn("Prioriteet");
+        priorityColumn.setMinWidth(75);
+        priorityColumn.setCellValueFactory(
+                new PropertyValueFactory<ProjectDetail, String>("priority"));
+        priorityColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        priorityColumn.setOnEditCommit(
+                new EventHandler<CellEditEvent<ProjectDetail, String>>() {
+                    @Override
+                    public void handle(CellEditEvent<ProjectDetail, String> t) {
+                        ((ProjectDetail) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())
+                        ).setPriority(t.getNewValue());
+                    }
+                }
+        );
 
-
-        kogusCol.setMinWidth(100);
-        kogusCol.setCellValueFactory(
-                new PropertyValueFactory<>("kogus"));
-        kogusCol.setCellFactory(cellFactory);
-        kogusCol.setOnEditCommit(
-                (CellEditEvent<Person, String> t) -> {
-                    ((Person) t.getTableView().getItems().get(
-                            t.getTablePosition().getRow())
-                    ).setKogus(t.getNewValue());
-                });
-
-        yhikCol.setMinWidth(100);
-        yhikCol.setCellValueFactory(
-                new PropertyValueFactory<>("yhik"));
-        yhikCol.setCellFactory(cellFactory);
-        yhikCol.setOnEditCommit(
-                (CellEditEvent<Person, String> t) -> {
-                    ((Person) t.getTableView().getItems().get(
-                            t.getTablePosition().getRow())
-                    ).setYhik(t.getNewValue());
-                });
+        TableColumn explanationColumn = new TableColumn("Selgitus");
+        explanationColumn.setMinWidth(200);
+        explanationColumn.setCellValueFactory(
+                new PropertyValueFactory<ProjectDetail, String>("explanation"));
+        explanationColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        explanationColumn.setOnEditCommit(
+                new EventHandler<CellEditEvent<ProjectDetail, String>>() {
+                    @Override
+                    public void handle(CellEditEvent<ProjectDetail, String> t) {
+                        ((ProjectDetail) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow())
+                        ).setPriority(t.getNewValue());
+                    }
+                }
+        );
 
         table.setItems(data);
-        table.getColumns().addAll(toitCol, kogusCol, yhikCol);
+        table.getColumns().addAll(numberColumn, dateColumn, priorityColumn, explanationColumn);
 
+        final TextField addNumber = new TextField();
+        addNumber.setPromptText("Number");
+        addNumber.setMaxWidth(numberColumn.getPrefWidth());
+        final TextField addDate = new TextField();
+        addDate.setMaxWidth(dateColumn.getPrefWidth());
+        addDate.setPromptText("Kuupaev");
+        final TextField addPriority = new TextField();
+        addPriority.setMaxWidth(priorityColumn.getPrefWidth());
+        addPriority.setPromptText("Prioriteet");
+        final TextField addExplanation = new TextField();
+        addExplanation.setMaxWidth(explanationColumn.getPrefWidth());
+        addExplanation.setPromptText("Selgitus");
 
-
-        final TextField addToit = new TextField();
-        addToit.setPromptText("Toit");
-        addToit.setMaxWidth(toitCol.getPrefWidth());
-        //addToit.setText("kala");
-        final TextField addKogus = new TextField();
-        addKogus.setMaxWidth(kogusCol.getPrefWidth());
-        addKogus.setPromptText("Kogus");
-        //addKogus.setText("100");
-        final TextField addYhik = new TextField();
-        addYhik.setMaxWidth(yhikCol.getPrefWidth());
-        addYhik.setPromptText("Ühik");
-        //addYhik.setText("g");
-
-
-        String toit;
-        String kogus;
-        String yhik;
-
-        toit = addToit.getText();
-        kogus = addKogus.getText();
-        yhik = addYhik.getText();
-
-        final Button addButton = new Button("Add");
-        addButton.setOnAction((ActionEvent e) -> {
-            data.add(new Person(
-                            addToit.getText(),
-                            addKogus.getText(),
-                            addYhik.getText())
-            );
-
-            addToit.clear();
-            addKogus.clear();
-            addYhik.clear();
-            KirjutaXML.write(data);
-
+        final Button deleteButton = new Button("Kustuta");
+        deleteButton.setOnAction(e -> {
+            // deleteDetail();
         });
 
-        hb.getChildren().addAll(addToit, addKogus, addYhik, addButton);
-        hb.setSpacing(3);
+        final Button addButton = new Button("Lisa");
+        addButton.setOnAction(e -> {
+            data.add(new ProjectDetail(
+                    addNumber.getText(),
+                    addDate.getText(),
+                    addPriority.getText(),
+                    addExplanation.getText()));
+            addNumber.clear();
+            addDate.clear();
+            addPriority.clear();
+            addExplanation.clear();
 
-        final VBox vbox = new VBox();
+            // saveDetails();                                                                                              //Salvestab lisatud detaili andmebaasi.
+        });
+
+        hbox.getChildren().addAll(addNumber, addDate, addPriority, addExplanation, addButton, deleteButton);
+        hbox.setSpacing(3);
+
         vbox.setSpacing(5);
-        vbox.setPadding(new Insets(10, 0, 0, 10));
-        vbox.getChildren().addAll(label, table, hb);
-
-        ((Group) scene.getRoot()).getChildren().addAll(vbox);
-
-        stage.setScene(scene);
-        stage.show();
+        //vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.getChildren().addAll(table, hbox);
     }
 
+    public static class ProjectDetail {
 
+        private final SimpleStringProperty number;
+        private final SimpleStringProperty date;
+        private final SimpleStringProperty priority;
+        private final SimpleStringProperty explanation;
 
-    class EditingCell extends TableCell<Person, String> {
-
-        private TextField textField;
-
-        public EditingCell() {
+        public ProjectDetail(String number1, String date1, String priority1, String explanation1) {
+            this.number = new SimpleStringProperty(number1);
+            this.date = new SimpleStringProperty(date1);
+            this.priority = new SimpleStringProperty(priority1);
+            this.explanation = new SimpleStringProperty(explanation1);
         }
 
-        @Override
-        public void startEdit() {
-            if (!isEmpty()) {
-                super.startEdit();
-                createTextField();
-                setText(null);
-                setGraphic(textField);
-                textField.selectAll();
-            }
+        public String getNumber() {
+
+            return number.get();
         }
 
-        @Override
-        public void cancelEdit() {
-            super.cancelEdit();
+        public void setNumber(String number1) {
 
-            setText((String) getItem());
-            setGraphic(null);
+            number.set(number1);
         }
 
-        @Override
-        public void updateItem(String item, boolean empty) {
-            super.updateItem(item, empty);
+        public String getDate() {
 
-            if (empty) {
-                setText(null);
-                setGraphic(null);
-            } else {
-                if (isEditing()) {
-                    if (textField != null) {
-                        textField.setText(getString());
-                    }
-                    setText(null);
-                    setGraphic(textField);
-                } else {
-                    setText(getString());
-                    setGraphic(null);
-                }
-            }
+            return date.get();
         }
 
-        private void createTextField() {
-            textField = new TextField(getString());
-            textField.setMinWidth(this.getWidth() - this.getGraphicTextGap() * 2);
-            textField.focusedProperty().addListener(
-                    (ObservableValue<? extends Boolean> arg0,
-                     Boolean arg1, Boolean arg2) -> {
-                        if (!arg2) {
-                            commitEdit(textField.getText());
-                        }
-                    });
+        public void setDate(String number1) {
+
+            date.set(number1);
         }
 
-        private String getString() {
-            return getItem() == null ? "" : getItem().toString();
+        public String getPriority() {
+
+            return priority.get();
+        }
+
+        public void setPriority(String number1) {
+
+            priority.set(number1);
+        }
+
+        public String getExplanation() {
+            return
+                    explanation.get();
+        }
+
+        public void setExplanation(String number1) {
+
+            explanation.set(number1);
         }
     }
 

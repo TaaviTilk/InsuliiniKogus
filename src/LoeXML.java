@@ -41,7 +41,7 @@ public class LoeXML {
 
 
 
-                    andmed.add(new Person(person1,person2, person3));
+                    andmed.add(new Person(person1,person2,person3));
 
 
                 }

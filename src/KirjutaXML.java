@@ -98,7 +98,7 @@ public class KirjutaXML {
 
             transformer.transform(source, result);
 
-            System.out.println("File saved!");
+            //System.out.println("File saved!");
 
         }
 
