@@ -8,11 +8,7 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //new Tabel_alg();
-        //new Tabel2();
-        //new Insuliin();
-        //new Insuliin_alg();
-        //new MainWindow();
-        new SplitWindow();
+        //new CB();
+        new PoolitaAken();
     }
 }

@@ -19,7 +19,6 @@ public class Toit {
         this.kogus = new SimpleStringProperty(k);
         this.yhik = new SimpleStringProperty(y);
     }
-
     public String getToit() {
         return toit.get();
     }

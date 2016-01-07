@@ -1,22 +1,21 @@
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-
-import javax.xml.bind.annotation.XmlElement;
 
 /**
  * Created by Taavi Tilk on 4.12.2015.
  */
-public class Person  {
+public class Toidud {
 
     private final SimpleStringProperty toit;
-    private final SimpleStringProperty kogus;
+    private final SimpleIntegerProperty kogus;
     private final SimpleStringProperty yhik;
 
 
 
 
-    public Person(String t, String k, String y) {
+    public Toidud(String t, Integer k, String y) {
         toit = new SimpleStringProperty(t);
-        kogus = new SimpleStringProperty(k);
+        kogus = new SimpleIntegerProperty(k);
         yhik = new SimpleStringProperty(y);
     }
 
@@ -28,11 +27,11 @@ public class Person  {
         toit.set(t);
     }
 
-    public String getKogus() {
+    public Integer getKogus() {
         return kogus.get();
     }
 
-    public void setKogus(String k) {
+    public void setKogus(Integer k) {
         kogus.set(k);
     }
 

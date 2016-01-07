@@ -26,10 +26,11 @@ import java.security.cert.CertPathValidatorException;
 public class Tabel2 {
     static VBox vBox = new VBox();
     static HBox hb = new HBox();
-    private static TableView<Person> table = new TableView<>();
+    public static TableView<Person> table = new TableView<>();
     public ObservableList<Person> data = FXCollections.observableArrayList();
     static String n;
     private IntegerProperty index = new SimpleIntegerProperty();
+    public Insuliin x = new Insuliin ();
 
     public Tabel2() {
         LoeXML a = new LoeXML();
@@ -128,12 +129,15 @@ public class Tabel2 {
                             addToit.getText(),
                             addKogus.getText(),
                             addYhik.getText())
+
             );
 
             addToit.clear();
             addKogus.clear();
             addYhik.clear();
             KirjutaXML.write(data);
+
+
 
         });
 
