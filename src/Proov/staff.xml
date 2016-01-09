@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<oracoes>
-	<oracao>
-		<nome>fajr</nome>
-		<dia>01/01</dia>
-		<horario tipo="verao">03:55</horario>
-	</oracao>
-</oracoes>

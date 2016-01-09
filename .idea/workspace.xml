@@ -2,38 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7050afbf-f60f-4b14-9924-1556cd564f08" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ParemPool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Toidud.java" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Keskmine.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\MainWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\PersonListWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\SplitWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel$ProjectDetail.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Ylemine.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Keskmine.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\MainWindow.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\PersonListWrapper.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Tabel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Ylemine.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\SplitWindow.java" afterPath="$PROJECT_DIR$/src/PoolitaAken.java" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\ToidudDb.sqlite" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Insuliin$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Insuliin_alg.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\ComboBoxSample$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\ComboBoxSample$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\ComboBoxSample$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\ComboBoxSample$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\ComboBoxSample.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\ReadAndPrintXMLFile.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\proov1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\proov1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Proov\staff.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel_alg$EditingCell.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Tabel_alg.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\out\production\InsuliiniKogus\Toidud.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Insuliin_alg.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Proov\ComboBoxSample.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Proov\ReadAndPrintXMLFile.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Proov\proov1.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Proov\staff.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Tabel_alg.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\src\Toidud.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Taavi Tilk\IdeaProjects\InsuliiniKogus\staff.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Insuliin.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Insuliin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Insuliin_alg.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Insuliin_alg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Main.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Person.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Person.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/PoolitaAken.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/PoolitaAken.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Tabel2$EditingCell.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Tabel2$EditingCell.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Tabel2.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Tabel2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/InsuliiniKogus/Toit.class" afterPath="$PROJECT_DIR$/out/production/InsuliiniKogus/Toit.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Insuliin.java" afterPath="$PROJECT_DIR$/src/Insuliin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Person.java" afterPath="$PROJECT_DIR$/src/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PoolitaAken.java" afterPath="$PROJECT_DIR$/src/PoolitaAken.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tabel2.java" afterPath="$PROJECT_DIR$/src/Tabel2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toit.java" afterPath="$PROJECT_DIR$/src/Toit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file2.xml" afterPath="$PROJECT_DIR$/file2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -57,70 +55,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toidud.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Toidud.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PoolitaAken.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PoolitaAken.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tabel2.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Tabel2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67712176">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParemPool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ParemPool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Insuliin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Insuliin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Insuliin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="153" column="21" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
-              <folding>
-                <element signature="e#1714#1722#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.25461254">
+              <caret line="287" column="52" selection-start-line="287" selection-start-column="52" selection-end-line="287" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -196,17 +136,17 @@
         <option value="$PROJECT_DIR$/src/Proov/proov1.java" />
         <option value="$PROJECT_DIR$/src/Toit.java" />
         <option value="$PROJECT_DIR$/src/Proov/Insuliin_alg.java" />
-        <option value="$PROJECT_DIR$/src/Insuliin_alg.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Toidud.java" />
         <option value="$PROJECT_DIR$/src/CB.java" />
-        <option value="$PROJECT_DIR$/src/Insuliin.java" />
         <option value="$PROJECT_DIR$/src/SplitWindow.java" />
         <option value="$PROJECT_DIR$/src/ParemPool.java" />
         <option value="$PROJECT_DIR$/src/PoolitaAkenParempool.java" />
         <option value="$PROJECT_DIR$/src/PoolitaAken.java" />
         <option value="$PROJECT_DIR$/src/Tabel2.java" />
+        <option value="$PROJECT_DIR$/src/Insuliin_alg.java" />
+        <option value="$PROJECT_DIR$/src/Insuliin.java" />
       </list>
     </option>
   </component>
@@ -282,24 +222,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InsuliiniKogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InsuliiniKogus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proov" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -641,7 +563,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33524683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23147154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27439725" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -738,98 +660,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/KirjutaXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="2" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -897,29 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Proov/staff.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Proov/ReadAndPrintXMLFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.357022">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staff.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40270728">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -936,49 +747,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tabel_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="131" column="13" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
-          <folding>
-            <element signature="e#6411#6412#0" expanded="true" />
-            <element signature="e#6487#6488#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/jre/lib/rt.jar!/sun/misc/Unsafe.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36">
           <caret line="354" column="23" selection-start-line="354" selection-start-column="23" selection-end-line="354" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Proov/ComboBoxSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18819188">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#590#591#0" expanded="false" />
-            <element signature="e#618#619#0" expanded="false" />
-            <element signature="e#1570#1571#0" expanded="false" />
-            <element signature="e#1614#1615#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Proov/proov1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21586716">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,18 +779,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin_alg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.289474">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Toit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59594095">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ParemPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15682657">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/jre/lib/rt.jar!/java/awt/Color.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8221345">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1030,59 +811,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insuliin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="21" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
-          <folding>
-            <element signature="e#1714#1722#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.4077491">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Toidud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ParemPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PoolitaAken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.47232473">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tabel2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67712176">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.53321034">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Insuliin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25461254">
+          <caret line="287" column="52" selection-start-line="287" selection-start-column="52" selection-end-line="287" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

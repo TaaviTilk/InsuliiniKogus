@@ -6,21 +6,17 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.scene.Group;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 
-import java.security.cert.CertPathValidatorException;
+
+/**
+ * Näitena on kasutatud Oraclei tabel koodi https://docs.oracle.com/javafx/2/ui_controls/table-view.htm
+ */
 
 
 public class Tabel2 {
@@ -34,7 +30,7 @@ public class Tabel2 {
 
     public Tabel2() {
         LoeXML a = new LoeXML();
-        data = a.getAndmed();                                                                 //Vastavalt klikitud projekti nimele "n" on nüüd listi "data" andmeteks andmebaasidesse tehtud päringu tulemus.
+        data = a.getAndmed();
         table.setItems(data);
         setupStage();
     }
@@ -44,22 +40,16 @@ public class Tabel2 {
         if (selectedIndex >= 0) {
             table.getItems().remove(selectedIndex);
         } else {
-            // Nothing selected.
             Alert alert = new Alert(Alert.AlertType.WARNING);
-            //alert.initOwner(mainApp.getPrimaryStage());
             alert.setTitle("No Selection");
             alert.setHeaderText("No Person Selected");
             alert.setContentText("Please select a person in the table.");
-
             alert.showAndWait();
         }
     }
 
     private void setupStage() {
 
-       // IntegerProperty indexProperty() {
-        //    return index;
-        //}
 
         table.setEditable(true);
 
@@ -153,9 +143,9 @@ public class Tabel2 {
         hb.setSpacing(3);
 
         vBox.setSpacing(5);
-        //vBox.setPadding(new Insets(10, 0, 0, 10));
+
         vBox.getChildren().addAll(table, hb);
-        //((Group) scene.getRoot()).getChildren().addAll(vBox);
+
 
 
     }

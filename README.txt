@@ -1,0 +1,3 @@
+Insuliiniprojekt: kalkulaator, mis aitaks lastel, kellel on diabeet, arvutada välja vajalik insuliini süstimise kogus. Diabeet on iseenesest haigus, kus organism on lõpetanud insuliini tootmise ning seda peab igakord kui süsivesikuid tarbid organismi süstima ehk siis iga söögikord on vaja kas insuliini süstida või sättida oma insuliinipumpa nõnda et vajalik kogus insuliini kehasse viiakse. 
+Programmi eesmärk on anda lastele kiirelt vastus, kui palju insuliini peavad nad peale oma söögikorda süstima. Selleks on toitude andmebaas, kus on sees erinevad toidud, toitained ja neis sisalduv süsivesikute kogus. Lisaks on vaja lapsel sisestada enda isiklik süsivesikute omistamise näitajad, mille alusel vajalik insuliini koguse välja arvutatakse. 
+Taavi Tilk
