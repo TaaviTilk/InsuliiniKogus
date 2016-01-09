@@ -7,11 +7,16 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
 import javafx.collections.ObservableList;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+
+
+/**
+ * Näitena on kasutatud Mkyong.com koodu http://www.mkyong.com/java/how-to-create-xml-file-in-java-dom/
+ */
+
 
 public class KirjutaXML {
 
@@ -21,10 +26,6 @@ public class KirjutaXML {
 
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-
-
-
-
 
             // root elements
             Document doc = docBuilder.newDocument();
@@ -60,29 +61,7 @@ public class KirjutaXML {
                 Element yhik = doc.createElement("Yhik");
                 yhik.appendChild(doc.createTextNode(data.get(i).getYhik()));
                 staff.appendChild(yhik);
-
             }
-
-/*
-            Element staff2 = doc.createElement("Person");
-            rootElement.appendChild(staff2);
-            //String a=""+i+1;
-            // set attribute to staff element
-            Attr attr1 = doc.createAttribute("id");
-            attr1.setValue("2");
-            staff2.setAttributeNode(attr1);
-
-            // shorten way
-            // staff.setAttribute("id", "1");
-
-            // firstname elements
-            Element firstname3 = doc.createElement("Toiduliik");
-            firstname3.appendChild(doc.createTextNode(data.get(2).getFirstName()));
-            staff2.appendChild(firstname3);
-*/
-
-            //}
-            // lastname elements
 
 
             // write the content into xml file
@@ -92,14 +71,8 @@ public class KirjutaXML {
 
             //StreamResult result =  new StreamResult(System.out);
             StreamResult result = new StreamResult(new File("/Users/Taavi Tilk/IdeaProjects/InsuliiniKogus/file2.xml"));
-
-
-
-
-            transformer.transform(source, result);
-
+             transformer.transform(source, result);
             //System.out.println("File saved!");
-
         }
 
         catch (ParserConfigurationException pce) {

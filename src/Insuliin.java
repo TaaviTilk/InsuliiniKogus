@@ -40,6 +40,8 @@ public class Insuliin {
         Start();
     }
 
+
+
     private void loeXML() {
         LoeXML a = new LoeXML();
         toit = a.getAndmed();
@@ -265,93 +267,129 @@ public class Insuliin {
         arvuta.setText("Arvuta");
         gridPane.setConstraints(arvuta, 1, 6);
         arvuta.setOnAction(event -> {
+                    float d1 =0;
+                    float d2 =0;
+                    float d3 =0;
+                    float d4 =0;
+                    float d5 =0;
+            try {
+                int i1 = Integer.valueOf((String) kogus1);
+                float a1 = (float) i1;
+                String b1 = toidukogus1.getText();
+                float c1 = Float.parseFloat(b1);
+                d1 = a1 * c1;
+                String e1 = "" + d1;
+                vastus1.setText(e1);
+            }
+            catch (Exception e){
+                System.out.println("1. lahter tühi");
+            }
 
-                    int i1 = Integer.valueOf((String) kogus1);
-                    float a1 = (float) i1;
-                    String b1 = toidukogus1.getText();
-                    float c1 = Float.parseFloat(b1);
-                    float d1 = a1*c1;
-                    String e1 = ""+d1;
-                    vastus1.setText(e1);
+            try {
+                int i2 = Integer.valueOf((String) kogus2);
+                float a2 = (float) i2;
+                String b2 = toidukogus2.getText();
+                float c2 = Float.parseFloat(b2);
+                d2 = a2 * c2;
+                String e2 = "" + d2;
+                vastus2.setText(e2);
+            }
+            catch (Exception e){
+                System.out.println("2. lahter tühi");
+            }
 
-                    int i2 = Integer.valueOf((String) kogus2);
-                    float a2 = (float) i2;
-                    String b2 = toidukogus2.getText();
-                    float c2 = Float.parseFloat(b2);
-                    float d2 = a2*c2;
-                    String e2 = ""+d2;
-                    vastus2.setText(e2);
+            try {
+                int i3 = Integer.valueOf((String) kogus3);
+                float a3 = (float) i3;
+                String b3 = toidukogus3.getText();
+                float c3 = Float.parseFloat(b3);
+                d3 = a3 * c3;
+                String e3 = "" + d3;
+                vastus3.setText(e3);
+            }
+            catch (Exception e){
+                System.out.println("3. lahter tühi");
+            }
 
-                    int i3 = Integer.valueOf((String) kogus3);
-                    float a3 = (float) i3;
-                    String b3 = toidukogus3.getText();
-                    float c3 = Float.parseFloat(b3);
-                    float d3 = a3*c3;
-                    String e3 = ""+d3;
-                    vastus3.setText(e3);
+            try {
+                int i4 = Integer.valueOf((String) kogus4);
+                float a4 = (float) i4;
+                String b4 = toidukogus4.getText();
+                float c4 = Float.parseFloat(b4);
+                d4 = a4 * c4;
+                String e4 = "" + d4;
+                vastus4.setText(e4);
+            }
+            catch (Exception e){
+                System.out.println("4. lahter tühi");
+            }
 
-                    int i4 = Integer.valueOf((String) kogus4);
-                    float a4 = (float) i4;
-                    String b4 = toidukogus4.getText();
-                    float c4 = Float.parseFloat(b4);
-                    float d4 = a4*c4;
-                    String e4 = ""+d4;
-                    vastus4.setText(e4);
+            try {
+                int i5 = Integer.valueOf((String) kogus5);
+                float a5 = (float) i5;
+                String b5 = toidukogus5.getText();
+                float c5 = Float.parseFloat(b5);
+                d5 = a5 * c5;
+                String e5 = "" + d5;
+                vastus5.setText(e5);
+            }
+            catch (Exception e){
+                System.out.println("5. lahter tühi");
+            }
+                float sum = d1 + d2 + d3 + d4 + d5;
+                String sum_string = "KOKKU: " + sum + "g";
+                kokku.setText(sum_string);
 
-                    int i5 = Integer.valueOf((String) kogus5);
-                    float a5 = (float) i5;
-                    String b5 = toidukogus5.getText();
-                    float c5 = Float.parseFloat(b5);
-                    float d5 = a5*c5;
-                    String e5 = ""+d5;
-                    vastus5.setText(e5);
+            try {
+                String abc = svok.getText();
+                Integer abc1 = Integer.parseInt(abc);
+                Integer sum2 = (int) sum / abc1;
+                String text_string = "SINU SÜSTITAV KOGUS ON: " + sum2 + " ü";
+                text.setText(text_string);
+            }
+            catch (Exception e){
+                System.out.println("Konstant lahter tühi");
+            }
 
-                    float sum = d1+d2+d3+d4+d5;
-                    String sum_string= "KOKKU: "+sum+"g";
-                    kokku.setText(sum_string);
+            //catch (Exception e){
+            //    System.out.println("Osad lahtrid tühjad");
+            //}
 
-
-                    String abc = svok.getText();
-                    Integer abc1 = Integer.parseInt(abc);
-                    Integer sum2 = (int)d1/abc1;
-                    String text_string= "SINU SÜSTITAV KOGUS ON: "+sum2+" ü";
-                    text.setText(text_string);
-
-                }
-        );
-
-
-        gridPane.getChildren().addAll(
-                valik1,
-                valik2,
-                valik3,
-                valik4,
-                valik5,
-                toidukogus1,
-                toidukogus2,
-                toidukogus3,
-                toidukogus4,
-                toidukogus5,
-                vastus1,
-                vastus2,
-                vastus3,
-                vastus4,
-                vastus5,
-                arvuta,
-                kokku
-                //salvesta
-        );
-
-        HBox hbox2 = new HBox(10);
-        hbox2.setAlignment(Pos.BOTTOM_LEFT);
-        hbox2.setPadding(new Insets(10, 10, 10, 10));
-
-        hbox2.getChildren().addAll(text);
+            }
+            );
 
 
-        vBox.getChildren().addAll(hbox, gridPane, hbox2);
+            gridPane.getChildren().addAll(
+                    valik1,
+                    valik2,
+                    valik3,
+                    valik4,
+                    valik5,
+                    toidukogus1,
+                    toidukogus2,
+                    toidukogus3,
+                    toidukogus4,
+                    toidukogus5,
+                    vastus1,
+                    vastus2,
+                    vastus3,
+                    vastus4,
+                    vastus5,
+                    arvuta,
+                    kokku
+                    //salvesta
+            );
 
-    }
+            HBox hbox2 = new HBox(10);
+            hbox2.setAlignment(Pos.BOTTOM_LEFT);
+            hbox2.setPadding(new Insets(10, 10, 10, 10));
+
+            hbox2.getChildren().addAll(text);
+
+
+            vBox.getChildren().addAll(hbox, gridPane, hbox2);
+
+        }
 
 
 
@@ -364,7 +402,7 @@ public class Insuliin {
     }
 
     */
-}
+    }
 
 
         ///static String nimi;
